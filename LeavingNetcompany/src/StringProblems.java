@@ -23,4 +23,17 @@ public class StringProblems {
 
         return stack.empty();
     }
+
+    public boolean isPalindrome(String s) {
+        for (var i = 0; i < s.length() / 2; i++) {
+            var left = String.valueOf(s.charAt(i));
+            var right = String.valueOf(s.charAt(s.length() - i - 1));
+
+            if (!left.equals(right)) {
+                return false;
+            }
+        }
+
+        return true;
+    }
 }
